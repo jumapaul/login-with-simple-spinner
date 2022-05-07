@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">paullogin</string>
+
+    <string-array name="Countries">
+        <item> Kenya</item>
+        <item>Tanzania</item>
+        <item>Somalia</item>
+        <item>Uganda</item>
+        <item>Ethopia</item>
+    </string-array>
+</resources>
