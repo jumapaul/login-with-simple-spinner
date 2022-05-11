@@ -12,16 +12,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val customList = listOf("All countries", "A", "Australia", "China", "India", "UK", "USA")
-
-        val adapter = ArrayAdapter(this, android.support.constraint.R.
-        layout.support_simple_spinner_dropdown_item, customList)
-
+        val adapter = ArrayAdapter(
+            this,
+            android.support.constraint.R.layout.support_simple_spinner_dropdown_item,
+            customList
+        )
         countries.adapter = adapter
+        countries.setSelection(0)
 
-        countries.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                Toast.makeText(this@MainActivity, "you selected ${adapterView?.
-                getItemAtPosition(position).toString()}", Toast.LENGTH_SHORT).show()
+        countries.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                adapterView: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(
+                    this@MainActivity, "you selected ${
+                        adapterView?.getItemAtPosition(position).toString()
+                    }", Toast.LENGTH_SHORT
+                ).show()
 
             }
 
